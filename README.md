@@ -1,2 +1,2 @@
-# Team1
+# Team 1
 * Scott Sawyer
