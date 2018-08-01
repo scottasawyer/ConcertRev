@@ -3,6 +3,6 @@
 * Cam Hurley
 * Vitkor Daniyelyan
 * Greg Row
-* Chris Norton
 
 
+ * Hi everyone

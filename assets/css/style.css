@@ -1,0 +1,35 @@
+body {
+    background: url(../images/dubstep_wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin:0;
+    padding:0;
+}
+
+.country-btn {
+    width:14vw;
+    font-size:2vw;
+    border:none;
+    margin:1.5vw;
+    padding:2vw;
+    background:#345;
+    color:white;
+    border-radius:15px;
+}
+#nav-mobile {
+    display:flex;
+}
+.changeNow {
+    border:none;
+    border-radius:15px;
+    margin-left:2vw;
+    margin-top:.5vw;
+}
+
+#goodResults {
+    font-size:16px;
+    background:red;
+    color:white;
+}
