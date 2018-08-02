@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 body {
     background: url(../images/dubstep_wallpaper.jpg);
     background-repeat: no-repeat;
@@ -8,6 +10,7 @@ body {
     padding:0;
 }
 
+>>>>>>> e5b4b81fb6e29fda1b865f16c27107b1c56042dd
 .country-btn {
     width:14vw;
     font-size:2vw;
@@ -32,4 +35,44 @@ body {
     font-size:16px;
     background:red;
     color:white;
+<<<<<<< HEAD
+}
+
+body {
+    background-image: url("../images/concert.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin:0;
+    padding:0;
+}
+
+.nav-wrapper {
+    background:rgba(255, 255, 255, 0.5);
+    margin-top: 15%;
+    height: 70px;
+}
+
+input::placeholder {
+    color: black;
+    font-size: 1.5em;
+    opacity: .6;
+    text-align: center;
+    font-size: 2.5vw;
+    
+}
+.changeNow {
+    cursor: pointer;
+    background-color: #234;
+    margin-right: 5vw;
+    color:white;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+.whatDoYouGot {
+    text-indent: 20%;
+=======
+>>>>>>> e5b4b81fb6e29fda1b865f16c27107b1c56042dd
 }
