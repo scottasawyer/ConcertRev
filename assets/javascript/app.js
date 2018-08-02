@@ -18,6 +18,7 @@ $('.changeNow').on('click', function () {
         //  console.log(response)
         showList = [];
 
+
         var countries = [];
 
         for (var j = 0; j < response.length; j++) {
@@ -37,10 +38,15 @@ $('.changeNow').on('click', function () {
     })
 })
 
+var $latitude = 0;
+var $longitude = 0;
+
 $(document).on('click', '.country-btn', function () {
     event.preventDefault();
     var country = $(this).data('country')
     var goodResults = [];
+    $('#goodResults').empty();
+
 
 
 
