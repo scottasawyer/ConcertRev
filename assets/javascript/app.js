@@ -64,8 +64,10 @@ $(document).on('click', '.country-btn', function () {
         $dateTime.text('Date: ' + goodResults[l].datetime)
         var $venueName = $('<p>')
         $venueName.text('Venue: ' + goodResults[l].venue.name)
+        var $region = $('<p>')
+        $region.text('Region: ' + goodResults[l].venue.city)
 
-        $div.append($description, $lineUp, $dateTime, $venueName)
+        $div.append($description, $lineUp, $dateTime, $venueName, $region)
         $('#goodResults').append($div)
 
 
