@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+=======
+body {
+    background: url(../images/dubstep_wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin:0;
+    padding:0;
+}
+
+>>>>>>> e5b4b81fb6e29fda1b865f16c27107b1c56042dd
 .country-btn {
     width:14vw;
     font-size:2vw;
@@ -22,6 +35,7 @@
     font-size:16px;
     background:red;
     color:white;
+<<<<<<< HEAD
 }
 
 body {
@@ -59,4 +73,6 @@ input::placeholder {
 }
 .whatDoYouGot {
     text-indent: 20%;
+=======
+>>>>>>> e5b4b81fb6e29fda1b865f16c27107b1c56042dd
 }
