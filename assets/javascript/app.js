@@ -57,17 +57,21 @@ $(document).on('click', '.country-btn', function () {
         $div.addClass('show-dtails')
 
         var $description = $('<p>')
-        $description.text('Name: ' + goodResults[l].description)
+            $description.text('Name: ' + goodResults[l].description)
         var $lineUp = $('<p>')
-        $lineUp.text('Lineup: ' + goodResults[l].lineup)
+            $lineUp.text('Lineup: ' + goodResults[l].lineup)
         var $dateTime = $('<p>')
-        $dateTime.text('Date: ' + goodResults[l].datetime)
+            $dateTime.text('Date: ' + goodResults[l].datetime)
         var $venueName = $('<p>')
-        $venueName.text('Venue: ' + goodResults[l].venue.name)
+            $venueName.text('Venue: ' + goodResults[l].venue.name)
         var $region = $('<p>')
-        $region.text('Region: ' + goodResults[l].venue.city)
+            $region.text('Region: ' + goodResults[l].venue.city)
+        var $latitude = $('<p>')
+            $latitude.text('Latitude: ' + goodResults[l].venue.latitude)
+        var $longitude = $('<p>')
+            $longitude.text('Latitude: ' + goodResults[l].venue.longitude)
 
-        $div.append($description, $lineUp, $dateTime, $venueName, $region)
+        $div.append($description, $lineUp, $dateTime, $venueName, $region, $latitude, $longitude)
         $('#goodResults').append($div)
 
 
