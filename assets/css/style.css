@@ -7,7 +7,6 @@ body {
     margin:0;
     padding:0;
 }
-
 .country-btn {
     width:14vw;
     font-size:2vw;
@@ -30,7 +29,6 @@ body {
     margin-left:2vw;
     margin-top:.5vw;
 }
-
 #goodResults {
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -68,7 +66,6 @@ body {
     text-align:center;
     font-size:3vw;
 }
-
 div p._paragraph {
     color:blue;
     background: orange;
@@ -91,7 +88,6 @@ div p._paragraph {
     -webkit-animation: colorchange infinite ease-in-out 4s;
     border: none;
 }
-
 @keyframes colorchange
     {
       0%   {background: rgb(51, 60, 70);}
