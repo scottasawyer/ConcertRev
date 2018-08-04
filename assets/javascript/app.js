@@ -68,6 +68,7 @@ $(document).ready(function () {
                 $div.addClass('show-details')
 
                 var _starGif = $('<button type="button" class="starConcert"><i class="fas fa-star"></i></button>')
+               
                 var $description = $('<p>')
                 $description.text('Concert Information: ' + goodResults[l].description)
                 var $lineUp = $('<p>')
@@ -85,7 +86,7 @@ $(document).ready(function () {
 
                 _starGif.attr('data-description', goodResults[l].description)
                         .attr('data-lineup', goodResults[l].lineup)
-                        .attr('data-dataTime', goodResults[l].datetime)
+                        .attr('data-dateTime', goodResults[l].datetime)
                         .attr('data-venue', goodResults[l].venue.name)
                         .attr('data-region', goodResults[l].venue.city)
                         .attr('data-latitude', goodResults[l].venue.latitude)
@@ -101,12 +102,14 @@ $(document).ready(function () {
     // } 
 
     $(document).on('click', '.starConcert', function() {
+        $(this).remove();
         console.log("clicked");
-        favConcert = {'data-description': $(this).attr('data-description'), 'data-lineup': $(this).attr('data-lineup'), 'data-dateTime': $(this).attr('data-dateTime'), 'data-venue': $(this).attr('data-venue'), 'data-region': $(this).attr('data-region'), 'data-latitude': $(this).attr('data-latitude'), 'data-longitude': $(this).attr('data-longitude')}
+        favConcert = {'data-description': $(this).attr('data-description'), 'data-lineup': $(this).attr('data-lineup'), 'data-dateTime': $(this).attr('data-dateTime'), 'data-venue': $(this).attr('data-venue'), 'data-region': $(this).attr('data-region')}
         console.log($(this).attr('data-description'))
         savedConcerts.push(favConcert)
         console.log("HELLO" + favConcert)
         localStorage.setItem('savedConcerts', JSON.stringify(savedConcerts))
+        
     })
 
     $('#favorites').on('click', function(event) {
@@ -125,20 +128,35 @@ $(document).ready(function () {
         for(var m = 0; m < savedConcerts.length; m++) {
             console.log(savedConcerts[m]['data-description'])
             console.log(m)
-            var concertDiv = $('<div>')
+            var concertDiv = $('<div>').attr('id', m).addClass('thisClass')
+
+            var btnConcert = $('<button>')
+            // var removeConcert = $('<button type="button" class="starConcert"><i class="fas fa-star"></i></button>')
+            btnConcert.addClass('removeConcert').html('<i class="fas fa-trash-alt"></i>').attr('id', "m" + m)
 
         Object.keys(savedConcerts[m]).forEach(key => {
+            
             console.log(key);
             console.log(savedConcerts[m][key])
-            var concertInfo = $('<p>').addClass('_paragraph')
-                                      .text(savedConcerts[m][key])
+
+            var concertInfo = $('<p>').addClass('_paragraph')                                                        
+                                      .text((savedConcerts[m][key]))
+                                      
             concertDiv.append(concertInfo)
-        }) 
-
+        })
+        concertDiv.append(btnConcert)
         $('#concertInformation').append(concertDiv)
-
         }
     })
+
+    $(document).on('click', '.removeConcert', function() {
+        var idIndex = $(this).attr('id')
+        console.log(idIndex)
+        console.log(idIndex.charAt(1))
+        var indexOfDiv = idIndex.charAt(1)
+        $(`#${indexOfDiv}`).remove() 
+        // $("#" + indexOfDiv).remove()
+    });
 
     $(document).on('click', '#goingBack', function() {
         
