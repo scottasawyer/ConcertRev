@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
 body {
-    background: url(../images/dubstep_wallpaper.jpg);
+    background: url(../images/concert.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
@@ -9,8 +7,6 @@ body {
     margin:0;
     padding:0;
 }
-
->>>>>>> e5b4b81fb6e29fda1b865f16c27107b1c56042dd
 .country-btn {
     width:14vw;
     font-size:2vw;
@@ -25,54 +21,79 @@ body {
     display:flex;
 }
 .changeNow {
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+    
     border:none;
     border-radius:15px;
     margin-left:2vw;
     margin-top:.5vw;
 }
-
 #goodResults {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
     font-size:16px;
-    background:red;
+    background:rgba(8, 8, 8, 0.5);
     color:white;
-<<<<<<< HEAD
+    margin-top:4vw;
 }
-
-body {
-    background-image: url("../images/concert.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-attachment: fixed;
-    background-position: center;
-    margin:0;
-    padding:0;
+.show-details {
+    width:30vw;
+    margin-bottom: 5vw;
+    margin-right:3vw;
 }
-
-.nav-wrapper {
-    background:rgba(255, 255, 255, 0.5);
-    margin-top: 15%;
-    height: 70px;
+#favorites {
+    background:transparent;
+    color:black;
+    border:none;
 }
-
-input::placeholder {
-    color: black;
-    font-size: 1.5em;
-    opacity: .6;
-    text-align: center;
-    font-size: 2.5vw;
+.starConcert {
     
+    border:none;
+    background: transparent;
+    color:orange;
 }
-.changeNow {
-    cursor: pointer;
-    background-color: #234;
-    margin-right: 5vw;
+#concertInformation {
+    display:grid;
+    height:50vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:2vw;
+    margin-top:10vh;
     color:white;
-    padding-left: 20px;
-    padding-right: 20px;
-    
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 5vh;
+    text-align:center;
+    font-size:3vw;
 }
-.whatDoYouGot {
-    text-indent: 20%;
-=======
->>>>>>> e5b4b81fb6e29fda1b865f16c27107b1c56042dd
+div p._paragraph {
+    color:blue;
+    background: orange;
+    font-size:6vw;
 }
+.data-description{
+    color:blue;
+}
+#goingBack {
+    clear:both;
+    border-radius:25px;
+    width:10vw;
+    height:5vh;
+    position:absolute;
+    left:82vw;
+    top:10px;
+    opacity: 0.7;
+    background: #777;
+    animation: colorChange infinite 3s;
+    -webkit-animation: colorchange infinite ease-in-out 4s;
+    border: none;
+}
+@keyframes colorchange
+    {
+      0%   {background: rgb(51, 60, 70);}
+      25%  {background: #757B87;}
+      50%  {background: #00c0e4;}
+      75%  {background: #0174c0}
+      100% {background: #342343;}
+    } 
+
