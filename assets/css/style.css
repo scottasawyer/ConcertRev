@@ -24,7 +24,7 @@ body {
 .changeNow {
     background: rgba(0, 0, 0, 0.5);
     color:white;
-    
+    padding:10px;
     border:none;
     border-radius:15px;
     margin-left:2vw;
@@ -32,6 +32,7 @@ body {
 }
 
 #goodResults {
+    text-align:center;
     display:grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
@@ -46,10 +47,30 @@ body {
     margin-right:3vw;
 }
 #favorites {
+    border-radius:15px;
+    padding:14px;
     background:transparent;
-    color:black;
+    color:#234;
     border:none;
+    transform:scale(0.7);
+    animation: colorChange infinite 3s;
+    -webkit-animation: colorchange infinite ease-in-out 4s;
+    /*border: none; */
 }
+
+@keyframes colorchange
+    {
+      0%   {background: rgb(51, 60, 70);}
+      25%  {background: #757B87;}
+      50%  {background: #00c0e4;}
+      75%  {background: #0174c0}
+      100% {background: #342343;}
+    }
+
+#favorites:hover{
+    color:yellow;
+}
+
 .starConcert {
     
     border:none;
@@ -57,20 +78,21 @@ body {
     color:yellow;
 }
 #concertInformation {
-    /* display:grid; */
-    width:15vw;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    margin:2vw;
-    margin-top:10vh;
+    /* display:inline-grid; */
+    grid-template-columns: 33% 33% 33%;
+    
+    
+    margin:6vw;
+    
     color:white;
     
-    margin-bottom: 5vh;
-    font-size:12px;
+    
+    
 
     /* display:grid;
     width:auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    text-align: center;
+    */
+    /*text-align: center;
     margin:2vw;
     margin-top:10vh;
     color:white;
@@ -82,6 +104,11 @@ body {
     
 }
 .thisClass {
+    text-align:center;
+    border-radius:15px;
+    padding:3vw;
+    /* width:auto; */
+    margin-right:3.5vw;
     margin-bottom:5vw;
     background: rgba(0, 0, 0, 0.5);
     
@@ -90,11 +117,20 @@ div p._paragraph {
     
     color:white;
     font-family:Arial, Helvetica, sans-serif;
-    font-size:14px;
+    font-size:1.5vw;
 }
 
 #goingBack {
     clear:both;
+    border-radius:10px;
+    width:50px;
+    position:absolute;
+    left:2.3vw;
+    top:9vw;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    /* clear:both;
     border-radius:25px;
     width:10vw;
     height:5vh;
@@ -103,9 +139,9 @@ div p._paragraph {
     top:10px;
     opacity: 0.7;
     background: #777;
-    animation: colorChange infinite 3s;
+    */animation: colorChange infinite 3s;
     -webkit-animation: colorchange infinite ease-in-out 4s;
-    border: none;
+    /*border: none; */
 }
 
 @keyframes colorchange
@@ -120,7 +156,9 @@ div p._paragraph {
 i.fa-trash-alt{
     background: transparent;
     border:none;
-    color:red;
+    color:white;
+    border-radius:5px;
+    color:#345;
 }
 .removeConcert{
     color:black;
