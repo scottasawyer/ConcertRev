@@ -23,13 +23,13 @@
 </head>
 <body>
     <div class="row">
-        <div class="col s12 m12 l12">
+        <div class="col s11 m11 l11">
                 <div class="nav-wrapper">
                     <form id"hideMe">
                     <ul id="nav-mobile" class="hand-on-med-and-down ">
                             <button id="favorites" class="fas fa-star fa-3x"></button>
                         <input class="whatDoYouGot" type="text" placeholder="Please enter a musical artist">
-                        <button class="changeNow" type="submit" value="Submit"><i class="material-icons right">search</i></button>
+                        <button class="changeNow" type="submit" value="Submit"><i class="material-icons">search</i></button>
                     </ul>
                     </form>
                 </div>
@@ -37,10 +37,13 @@
     </div>
     
     <div id="concertInformation"></div>
+
+    
     
     <div id="countryList"></div>
     <div id="goodResults"></div>
-    <button id="goingBack" class="fas fa-angle-left fa-3x"></button>
+    <!-- <button id="goingBack"><i class="material-icons">backspace</i></button> -->
+    <a class="waves-effect waves-light btn" id="goingBack"><i class="material-icons">backspace</i></a>
     <script src="assets/javascript/app.js"></script>
 </body>
 </html>
