@@ -1,5 +1,5 @@
 body {
-    background: url(../images/dubstep_wallpaper.jpg);
+    background: url(../images/concert.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
@@ -22,6 +22,9 @@ body {
     display:flex;
 }
 .changeNow {
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
+    
     border:none;
     border-radius:15px;
     margin-left:2vw;
@@ -29,7 +32,72 @@ body {
 }
 
 #goodResults {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
     font-size:16px;
-    background:red;
+    background:rgba(8, 8, 8, 0.5);
     color:white;
+    margin-top:4vw;
 }
+.show-details {
+    width:30vw;
+    margin-bottom: 5vw;
+    margin-right:3vw;
+}
+#favorites {
+    background:transparent;
+    color:black;
+    border:none;
+}
+.starConcert {
+    
+    border:none;
+    background: transparent;
+    color:orange;
+}
+#concertInformation {
+    display:grid;
+    height:50vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:2vw;
+    margin-top:10vh;
+    color:white;
+    background: rgba(0, 0, 0, 0.5);
+    margin-bottom: 5vh;
+    text-align:center;
+    font-size:3vw;
+}
+
+div p._paragraph {
+    color:blue;
+    background: orange;
+    font-size:6vw;
+}
+.data-description{
+    color:blue;
+}
+#goingBack {
+    clear:both;
+    border-radius:25px;
+    width:10vw;
+    height:5vh;
+    position:absolute;
+    left:82vw;
+    top:10px;
+    opacity: 0.7;
+    background: #777;
+    animation: colorChange infinite 3s;
+    -webkit-animation: colorchange infinite ease-in-out 4s;
+    border: none;
+}
+
+@keyframes colorchange
+    {
+      0%   {background: rgb(51, 60, 70);}
+      25%  {background: #757B87;}
+      50%  {background: #00c0e4;}
+      75%  {background: #0174c0}
+      100% {background: #342343;}
+    } 
+
