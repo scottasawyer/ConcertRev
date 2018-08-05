@@ -3,6 +3,8 @@ $(document).ready(function () {
     $('#goingBack').hide();
     var showList = [];
     var savedConcerts = [];
+    var $latitude = 0;
+    var $longitude = 0;
 
     var config = {
         apiKey: "AIzaSyDwVaReBYZNKqN2NV_5zyik1Huff2ka_ws",
@@ -59,10 +61,6 @@ $(document).ready(function () {
             }
         })
     })
-
-    var $latitude = 0;
-    var $longitude = 0;
-
 
     $(document).on('click', '.country-btn', function () {
 
