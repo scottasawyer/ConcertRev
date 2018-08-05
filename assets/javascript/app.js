@@ -87,8 +87,9 @@ $(document).ready(function () {
             $description.text('Concert Information: ' + goodResults[l].description)
             var $lineUp = $('<p>')
             $lineUp.text('Lineup: ' + goodResults[l].lineup)
-            var $dateTime = $('<p>')
-            $dateTime.text('Date: ' + goodResults[l].datetime)
+            var $dateTime = $('<p id="wDate">')
+            var wDate = moment(goodResults[l].datetime).format('MMMM Do YYYY, h:mm a');
+            $dateTime.text('Date: ' + wDate);
             var $venueName = $('<p>')
             $venueName.text('Venue: ' + goodResults[l].venue.name)
             var $region = $('<p>')
