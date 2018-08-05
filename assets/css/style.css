@@ -7,11 +7,43 @@ body {
     margin:0;
     padding:0;
 }
+#openingContainer{
+    margin:10vw 25vw;
+    text-align: center;
+}
+#openingSwitch1, #openingSwitch2, #openingSwitch3, #openingSwitch4  {
+    
+    float:left;
+    margin:0 auto;
+    height:20vw;
+    width:20vw;
+    background:rgba(0, 0, 0, 0.5);
+    border-radius:20px;
+}
+#openingSwitch1{
+    margin-right:3px;
+}
+#openingSwitch3{
+    clear:both;
+    margin-right:3px
+}
+#openingSwitch1, #openingSwitch2 {
+    margin-bottom:3px;
+}
+.rotateBoxes {
+    background:transparent;
+    border:none;
+}
+.rotateBoxes:focus{
+    background:transparent;
+}
 .country-btn {
+    margin:0 auto;
     width:14vw;
     font-size:2vw;
     border:none;
     margin:1.5vw;
+    margin-left:9.5vw;
     padding:2vw;
     background:#345;
     color:white;
@@ -28,6 +60,11 @@ body {
     border-radius:15px;
     margin-left:2vw;
     margin-top:.5vw;
+}
+#countryList{
+   text-align: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;   
 }
 #goodResults {
     text-align:center;
@@ -50,12 +87,9 @@ body {
     background:transparent;
     color:#234;
     border:none;
-    transform:scale(0.7);
     animation: colorChange infinite 3s;
     -webkit-animation: colorchange infinite ease-in-out 4s;
-    /*border: none; */
 }
-
 @keyframes colorchange
     {
       0%   {background: rgb(51, 60, 70);}
@@ -64,13 +98,10 @@ body {
       75%  {background: #0174c0}
       100% {background: #342343;}
     }
-
 #favorites:hover{
     color:yellow;
 }
-
 .starConcert {
-    
     border:none;
     background: transparent;
     color:yellow;
@@ -78,38 +109,25 @@ body {
 #concertInformation {
     /* display:inline-grid; */
     grid-template-columns: 33% 33% 33%;
-    
-    
-    margin:6vw;
-    
+    margin:6vw;  
     color:white;
-    
-    
-    
-
-    /* display:grid;
-    width:auto;
-    */
-    /*text-align: center;
-    margin:2vw;
-    margin-top:10vh;
-    color:white;
+  
+}
+.thisClass {
+    text-align:center;
+    border-radius:15px;
+    padding:3vw;
+    margin-right:3.5vw;
+    margin-bottom:5vw;
     background: rgba(0, 0, 0, 0.5);
-    margin-bottom: 5vh;
     
-    font-size:12px; */
-   
-    
-}
-
+} 
 div p._paragraph {
-    color:orange;
-    font-size:2vw;
+    
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1.5vw;
 }
-.data-description{
-    color:blue;
-}
-
 #goingBack {
     clear:both;
     border-radius:10px;
@@ -120,28 +138,31 @@ div p._paragraph {
     background: rgba(0, 0, 0, 0.5);
     border: none;
     color: white;
-    /* clear:both;
-    border-radius:25px;
- 
-    position:absolute;
-    left:2%;
-    top:9%;
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
+    animation: colorChange infinite 3s;
+    -webkit-animation: colorchange infinite ease-in-out 4s;
 }
-@keyframes colorchange
-    {
-      0%   {background: rgb(51, 60, 70);}
-      25%  {background: #757B87;}
-      50%  {background: #00c0e4;}
-      75%  {background: #0174c0}
-      100% {background: #342343;}
-    } 
-
-
-.whatDoYouGot::placeholder {
-    color: rgba(0, 0, 0, 0.5);
-}    
-
-
+@keyframes colorchange {
+    0%   {background: rgb(51, 60, 70);}
+    25%  {background: #757B87;}
+    50%  {background: #00c0e4;}
+    75%  {background: #0174c0}
+    100% {background: #342343;}
+} 
+i.fa-trash-alt{
+    background: transparent;
+    border:none;
+    color:white;
+    border-radius:5px;
+    color:#345;
+}
+.removeConcert{
+    color:black;
+}
+/* #animateImage0:hover {
+    background:rgba(255, 0, 0, 0.5);
+    animation:wobble 2s infinite;
+}
+#animateImage1:hover {
+    background:rgb(245, 125, 5);
+    animation:rubberBand 2s infinite;
+} */

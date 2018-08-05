@@ -1,61 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Group project</title>
-
-
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <!-- Adding a google fonts -->
     <!-- **** -->
     <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <!-- Materilize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-    <!-- Css -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+     <!-- CSS -->
+     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 </head>
-
 <body>
     <div class="row">
-        <div class="col s11 m11 l11">
-            <div class="nav-wrapper">
-                <form id "hideMe">
+        <div class="col s12 m12 l12">
+                <div class="nav-wrapper">
+                    <form id"hideMe">
                     <ul id="nav-mobile" class="hand-on-med-and-down ">
-                        <button id="favorites" class="fas fa-star fa-3x"></button>
+                        <button id="favorites" class="fas fa-star fa-2x"></button>
                         <input class="whatDoYouGot" type="text" placeholder="Please enter a musical artist">
-                        <button class="changeNow" type="submit" value="Submit">
-                            <i class="material-icons">search</i>
-                        </button>
+                        <button class="changeNow play" type="submit" value="Submit"><i class="material-icons right">search</i></button>
                     </ul>
-                </form>
-            </div>
+                    <div id="concertInformation"></div>
+                    </form>
+                </div>
         </div>
     </div>
-
-    <div id="concertInformation"></div>
-
-
-
+    <!-- <div id="openingContainer">
+        <button type="submit" class="rotateBoxes">
+            <div class="switch" id="openingSwitch1"></div>
+            <div class="switch" id="openingSwitch2"></div>
+            <div class="switch" id="openingSwitch3"></div>
+            <div class="switch" id="openingSwitch4"></div>
+        </button>
+    </div> -->
+    
+    
+    
     <div id="countryList"></div>
     <div id="goodResults"></div>
-
-    <!-- <button id="goingBack"><i class="material-icons">backspace</i></button> -->
-    <a class="waves-effect waves-light btn" id="goingBack">
-        <i class="material-icons">backspace</i>
-    </a>
-
+    <button id="goingBack" class="material-icons slideLeft">backspace</button>
+    <!--Anime.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+    <!--Our js file-->
     <script src="assets/javascript/app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
 </body>
-
 </html>
