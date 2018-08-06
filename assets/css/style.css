@@ -1,25 +1,84 @@
-body {
-    background: url(../images/concert.jpg);
+body, html {
+    background: url(../images/galaxy.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
     background-position: center;
     margin:0;
     padding:0;
+    height:100%;
 }
-
+.nav-wrapper{
+    background: rgba(8, 8, 8, 0.5);
+    padding:3vw;
+}
+#openingContainer{
+    width:100%;
+    overflow:hidden;
+    text-align: center;
+    padding:20vw 0 0 0;
+    position: absolute; 
+}
+.whatDoYouGot {
+    z-index:10;
+}
+.pulse{
+    animation-duration:5s;
+}
+.switch1, .switch2, .switch3, .switch4  {
+    float:left;
+    margin:0 auto;
+    height:25vw;
+    width:25vw;    
+}
+.switch1{
+    background:url(../images/image_part_001.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+    border-radius:20px 0px 0px 0px;
+}
+.switch3{
+    clear:both;
+    border-radius:0px 0px 0px 20px;
+    background:url(../images/image_part_003.jpg);
+    background-repeat: no-repeat;
+    background-size:100%; 
+}
+.switch2 {
+    border-radius:0px 20px 0px 0px;
+    background:url(../images/image_part_002.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+.switch4 {
+    border-radius:0px 0px 20px 0px;
+    background:url(../images/image_part_004.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+.rotateBoxes {
+    margin-bottom:0;
+    background:transparent;
+    border:none;  
+}
+.rotateBoxes:focus{
+    background:transparent;
+}
 .country-btn {
+    margin:0 auto;
     width:14vw;
     font-size:2vw;
     border:none;
     margin:1.5vw;
+    margin-left:9.5vw;
     padding:2vw;
-    background:#345;
+    background:rgba(16, 32, 63, 0.7);
     color:white;
     border-radius:15px;
 }
 #nav-mobile {
     display:flex;
+    margin-left:8vw;
 }
 .changeNow {
     background: rgba(0, 0, 0, 0.5);
@@ -30,7 +89,12 @@ body {
     margin-left:2vw;
     margin-top:.5vw;
 }
-
+#countryList{
+    overflow:hidden;
+    text-align: center;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;   
+}
 #goodResults {
     text-align:center;
     display:grid;
@@ -47,112 +111,52 @@ body {
     margin-right:3vw;
 }
 #favorites {
+    position:absolute;
+    margin-top:-95px;
+    margin-left:15px;
     border-radius:15px;
     padding:14px;
     background:transparent;
     color:#234;
     border:none;
-    transform:scale(0.7);
-    animation: colorChange infinite 3s;
-    -webkit-animation: colorchange infinite ease-in-out 4s;
-    /*border: none; */
 }
-
-@keyframes colorchange
-    {
-      0%   {background: rgb(51, 60, 70);}
-      25%  {background: #757B87;}
-      50%  {background: #00c0e4;}
-      75%  {background: #0174c0}
-      100% {background: #342343;}
-    }
-
 #favorites:hover{
     color:yellow;
 }
-
 .starConcert {
-    
     border:none;
     background: transparent;
     color:yellow;
 }
 #concertInformation {
-    /* display:inline-grid; */
     grid-template-columns: 33% 33% 33%;
-    
-    
-    margin:6vw;
-    
+    margin:6vw;  
     color:white;
-    
-    
-    
-
-    /* display:grid;
-    width:auto;
-    */
-    /*text-align: center;
-    margin:2vw;
-    margin-top:10vh;
-    color:white;
-    background: rgba(0, 0, 0, 0.5);
-    margin-bottom: 5vh;
-    
-    font-size:12px; */
-   
-    
 }
 .thisClass {
     text-align:center;
     border-radius:15px;
     padding:3vw;
-    /* width:auto; */
     margin-right:3.5vw;
     margin-bottom:5vw;
     background: rgba(0, 0, 0, 0.5);
-    
 } 
 div p._paragraph {
-    
     color:white;
     font-family:Arial, Helvetica, sans-serif;
     font-size:1.5vw;
 }
-
 #goingBack {
     clear:both;
     border-radius:10px;
+    background:transparent;
     width:50px;
     position:absolute;
-    left:2.3vw;
-    top:9vw;
-    background: rgba(0, 0, 0, 0.5);
+    margin-left:20px;
+    margin-top:-35px;
     border: none;
     color: white;
-    /* clear:both;
-    border-radius:25px;
-    width:10vw;
-    height:5vh;
-    position:absolute;
-    left:82vw;
-    top:10px;
-    opacity: 0.7;
-    background: #777;
-    */animation: colorChange infinite 3s;
-    -webkit-animation: colorchange infinite ease-in-out 4s;
-    /*border: none; */
 }
-
-@keyframes colorchange
-    {
-      0%   {background: rgb(51, 60, 70);}
-      25%  {background: #757B87;}
-      50%  {background: #00c0e4;}
-      75%  {background: #0174c0}
-      100% {background: #342343;}
-    } 
-
 i.fa-trash-alt{
     background: transparent;
     border:none;
@@ -162,5 +166,25 @@ i.fa-trash-alt{
 }
 .removeConcert{
     color:black;
+}
+#animateImage0:hover {
+    background:rgba(255, 0, 0, 0.5);
+    animation:wobble 2s infinite;
+    color:rgba(0, 0, 0);
+}
+#animateImage1:hover {
+    background:rgb(245, 125, 5, 0.5);
+    animation:rubberBand 2s infinite;
+    color:rgba(0, 0, 0);
+}
+#animateImage2:hover {
+    background:rgba(255, 251, 0, 0.5);
+    animation:tada 2s infinite;
+    color:rgba(0, 0, 0);
+}
+#animateImage3:hover {
+    background:rgba(3, 223, 14, 0.5);
+    animation:bounce 1s;
+    color:rgba(0, 0, 0);
 }
 

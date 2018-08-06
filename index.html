@@ -11,36 +11,52 @@
     <!-- **** -->
     <!-- jQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
     <!-- Materilize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
-     <!-- Css -->
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+     <!-- CSS -->
      <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 </head>
 <body>
     <div class="row">
         <div class="col s12 m12 l12">
-                <div class="nav-wrapper">
-                    <form id"hideMe">
-                    <ul id="nav-mobile" class="hand-on-med-and-down ">
-                            <button id="favorites" class="fas fa-star fa-3x"></button>
-                        <input class="whatDoYouGot" type="text" placeholder="Please enter a musical artist">
-                        <button class="changeNow" type="submit" value="Submit"><i class="material-icons right">search</i></button>
-                    </ul>
-                    </form>
-                </div>
+            <div class="nav-wrapper">
+                <form id"hideMe">
+                <ul id="nav-mobile" class="hand-on-med-and-down ">                    
+                    <input class="whatDoYouGot" type="text" placeholder="Please enter a musical artist">
+                    <button class="changeNow play animated pulse infinite" type="submit" value="Submit"><i class="material-icons right">search</i></button>
+                </ul>
+                </form>
+            </div>
+            <button id="favorites" class="fas fa-star fa-2x"></button>
+            <button id="goingBack" class="material-icons slideLeft">arrow_back</button>
+            <div id="concertInformation"></div>
         </div>
     </div>
+
+    <div id="openingContainer">
+        
+        <button type="submit" class="rotateBoxes" value="completed">
+            <!-- <p class="appTitle">The Best APP Ever!</p> -->
+            <div class="switch1 _s1 el "></div>
+            <div class="switch2 _s2 el "></div>
+            <div class="switch3 _s3 el "></div>
+            <div class="switch4 _s4 el "></div>
+        </button>
+    </div>
     
-    <div id="concertInformation"></div>
     
-    <div id="countryList"></div>
+    
+    <div id="countryList" class="btn-animate"></div>
     <div id="goodResults"></div>
 
-    <button id="goingBack" class="material-icons">backspace</button>
+    
+    <!--Anime.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+    <!--Our js file-->
     <script src="assets/javascript/app.js"></script>
 </body>
 </html>
