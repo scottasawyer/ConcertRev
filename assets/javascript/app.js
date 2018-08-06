@@ -274,7 +274,10 @@ $(document).ready(function () {
                     padding: 0,
                     zIndex:10,
                 }
-                $('body, html').css(styles)  
+                $('body, html').css(styles) 
+            setTimeout(function(){
+                   $('.rotateBoxes').hide();
+               }, 1500);
         })
     
         function begin() {
