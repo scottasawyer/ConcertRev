@@ -1,12 +1,70 @@
-body {
-    background: url(../images/concert.jpg);
+body, html {
+    background: url(../images/galaxy.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
     background-position: center;
     margin:0;
     padding:0;
+    height:100%;
 }
+.nav-wrapper{
+    background: rgba(8, 8, 8, 0.5);
+    padding:3vw;
+}
+#openingContainer{
+    width:100%;
+    overflow:hidden;
+    text-align: center;
+    padding:20vw 0 0 0;
+    position: absolute; 
+}
+.whatDoYouGot {
+    z-index:10;
+}
+.pulse{
+    animation-duration:5s;
+}
+.switch1, .switch2, .switch3, .switch4  {
+    float:left;
+    margin:0 auto;
+    height:25vw;
+    width:25vw;    
+}
+.switch1{
+    background:url(../images/image_part_001.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+    border-radius:20px 0px 0px 0px;
+}
+.switch3{
+    clear:both;
+    border-radius:0px 0px 0px 20px;
+    background:url(../images/image_part_003.jpg);
+    background-repeat: no-repeat;
+    background-size:100%; 
+}
+.switch2 {
+    border-radius:0px 20px 0px 0px;
+    background:url(../images/image_part_002.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+.switch4 {
+    border-radius:0px 0px 20px 0px;
+    background:url(../images/image_part_004.jpg);
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+.rotateBoxes {
+    margin-bottom:0;
+    background:transparent;
+    border:none;  
+}
+.rotateBoxes:focus{
+    background:transparent;
+}
+
 #openingContainer{
     margin:10vw 25vw;
     text-align: center;
@@ -45,12 +103,13 @@ body {
     margin:1.5vw;
     margin-left:9.5vw;
     padding:2vw;
-    background:#345;
+    background:rgba(16, 32, 63, 0.7);
     color:white;
     border-radius:15px;
 }
 #nav-mobile {
     display:flex;
+    margin-left:8vw;
 }
 .changeNow {
     background: rgba(0, 0, 0, 0.5);
@@ -62,7 +121,8 @@ body {
     margin-top:.5vw;
 }
 #countryList{
-   text-align: center;
+    overflow:hidden;
+    text-align: center;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;   
 }
@@ -82,22 +142,16 @@ body {
     margin-right:3vw;
 }
 #favorites {
+    position:absolute;
+    margin-top:-95px;
+    margin-left:15px;
     border-radius:15px;
     padding:14px;
     background:transparent;
     color:#234;
     border:none;
-    animation: colorChange infinite 3s;
-    -webkit-animation: colorchange infinite ease-in-out 4s;
 }
-@keyframes colorchange
-    {
-      0%   {background: rgb(51, 60, 70);}
-      25%  {background: #757B87;}
-      50%  {background: #00c0e4;}
-      75%  {background: #0174c0}
-      100% {background: #342343;}
-    }
+
 #favorites:hover{
     color:yellow;
 }
@@ -107,11 +161,9 @@ body {
     color:yellow;
 }
 #concertInformation {
-    /* display:inline-grid; */
     grid-template-columns: 33% 33% 33%;
     margin:6vw;  
     color:white;
-  
 }
 .thisClass {
     text-align:center;
@@ -120,10 +172,8 @@ body {
     margin-right:3.5vw;
     margin-bottom:5vw;
     background: rgba(0, 0, 0, 0.5);
-    
 } 
 div p._paragraph {
-    
     color:white;
     font-family:Arial, Helvetica, sans-serif;
     font-size:1.5vw;
@@ -131,23 +181,14 @@ div p._paragraph {
 #goingBack {
     clear:both;
     border-radius:10px;
+    background:transparent;
     width:50px;
     position:absolute;
-    left:2.3vw;
-    top:9vw;
-    background: rgba(0, 0, 0, 0.5);
+    margin-left:20px;
+    margin-top:-35px;
     border: none;
     color: white;
-    animation: colorChange infinite 3s;
-    -webkit-animation: colorchange infinite ease-in-out 4s;
 }
-@keyframes colorchange {
-    0%   {background: rgb(51, 60, 70);}
-    25%  {background: #757B87;}
-    50%  {background: #00c0e4;}
-    75%  {background: #0174c0}
-    100% {background: #342343;}
-} 
 i.fa-trash-alt{
     background: transparent;
     border:none;
@@ -158,11 +199,23 @@ i.fa-trash-alt{
 .removeConcert{
     color:black;
 }
-/* #animateImage0:hover {
+#animateImage0:hover {
     background:rgba(255, 0, 0, 0.5);
     animation:wobble 2s infinite;
+    color:rgba(0, 0, 0);
 }
 #animateImage1:hover {
-    background:rgb(245, 125, 5);
+    background:rgb(245, 125, 5, 0.5);
     animation:rubberBand 2s infinite;
-} */
+    color:rgba(0, 0, 0);
+}
+#animateImage2:hover {
+    background:rgba(255, 251, 0, 0.5);
+    animation:tada 2s infinite;
+    color:rgba(0, 0, 0);
+}
+#animateImage3:hover {
+    background:rgba(3, 223, 14, 0.5);
+    animation:bounce 1s;
+    color:rgba(0, 0, 0);
+}

@@ -21,39 +21,44 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
 </head>
 
 <body>
     <div class="row">
         <div class="col s12 m12 l12">
             <div class="nav-wrapper">
-                <form id "hideMe">
-                    <ul id="nav-mobile" class="hand-on-med-and-down ">
-                        <button id="favorites" class="fas fa-star fa-2x"></button>
-                        <input class="whatDoYouGot" type="text" placeholder="Please enter a musical artist">
-                        <button class="changeNow play" type="submit" value="Submit">
-                            <i class="material-icons right">search</i>
-                        </button>
-                    </ul>
-                    <div id="concertInformation"></div>
+
+                <form id"hideMe">
+                <ul id="nav-mobile" class="hand-on-med-and-down ">                    
+                    <input class="whatDoYouGot" type="text" placeholder="Please enter a musical artist">
+                    <button class="changeNow play animated pulse infinite" type="submit" value="Submit"><i class="material-icons right">search</i></button>
+                </ul>
                 </form>
             </div>
+            <button id="favorites" class="fas fa-star fa-2x"></button>
+            <button id="goingBack" class="material-icons slideLeft">arrow_back</button>
+            <div id="concertInformation"></div>
         </div>
     </div>
-    <!-- <div id="openingContainer">
-        <button type="submit" class="rotateBoxes">
-            <div class="switch" id="openingSwitch1"></div>
-            <div class="switch" id="openingSwitch2"></div>
-            <div class="switch" id="openingSwitch3"></div>
-            <div class="switch" id="openingSwitch4"></div>
+
+    <div id="openingContainer">
+        
+        <button type="submit" class="rotateBoxes" value="completed">
+            <!-- <p class="appTitle">The Best APP Ever!</p> -->
+            <div class="switch1 _s1 el "></div>
+            <div class="switch2 _s2 el "></div>
+            <div class="switch3 _s3 el "></div>
+            <div class="switch4 _s4 el "></div>
         </button>
-    </div> -->
-
-
-
-    <div id="countryList"></div>
+    </div>
+    
+    
+    
+    <div id="countryList" class="btn-animate"></div>
     <div id="goodResults"></div>
-    <button id="goingBack" class="material-icons slideLeft">backspace</button>
+
+
     <!--Anime.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
     <!--Our js file-->
