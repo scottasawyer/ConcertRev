@@ -229,38 +229,54 @@ $(document).ready(function () {
     });
 
     relativeOffset
-
         .add({
             targets: '#openingContainer .switch1.el',
-            translateY: -1100,
+            translateY: [{value:-700, duration:5000}],
+            rotate:[{value:'1turn', duration:4000}],
             easing: 'easeOutExpo',
-            // audio: url('../audio/dissonant-kick_G#_major.wav'),        
-        })
-        .add({
-            targets: '#openingContainer .switch2.el',
-            translateX: 700,
-            opacity: [
-                {
-                    value: 1, duration: 200,
-                    value: 0
-                }
-            ],
-            easing: 'easeOutExpo',
-            offset: '-=600', // Starts 600ms before the previous animation ends
-        })
-        .add({
-            targets: '#openingContainer .switch4.el',
-            translateY: 700,
+            // audio: url('../audio/dissonant-kick_G#_major.wav'), 
+            begin: function() {
+                document.getElementById("mysoundclip1").play()
+            } 
+    })
 
-            easing: 'easeOutExpo',
-            offset: '-=600', // Starts 800ms before the previous animation ends    
-        })
-        .add({
-            targets: '#openingContainer .switch3.el',
-            translateX: -1500,
-            easing: 'easeOutExpo',
-            offset: '-=500', // Starts 800ms before the previous animation ends 
-        })
+    .add({
+        targets: '#openingContainer .switch2.el',
+        translateX: 700,
+
+        easing: 'easeOutExpo',
+        offset: '-=3700', //Starts 3700ms before the previous animation ends
+        begin: function() {
+            document.getElementById("mysoundclip2").play()
+        },
+        complete:function() {
+            $('.switch2').hide();
+        }
+    })
+    .add({
+        targets: '#openingContainer .switch4.el',
+        translateY: 700,
+
+        easing: 'easeOutExpo',
+        offset: '-=2500', //Starts 800ms before the previous animation ends 
+        begin: function() {
+            document.getElementById("mysoundclip3").play()
+        },
+        complete:function() {
+            $('.switch2').hide();
+        } 
+    })
+
+    .add({
+        targets: '#openingContainer .switch3.el',
+        translateX: [{value:-400, duration:6000}],
+        rotate: [{value:'1turn', duration:6000}],
+        // easing: 'easeInQuart',
+        offset: '-=1600', //Starts 800ms before the previous animation ends 
+        begin: function() {
+            document.getElementById("mysoundclip4").play()
+        }
+    })
 
     document.querySelector('.rotateBoxes').onclick = relativeOffset.restart;
 
@@ -284,7 +300,7 @@ $(document).ready(function () {
         $('body, html').css(styles)
         setTimeout(function () {
             $('.rotateBoxes').hide();
-        }, 1500);
+        }, 4500);
     })
 
     function begin() {
