@@ -95,8 +95,6 @@ $(document).ready(function () {
             $dateTime.text('Date: ' + eDate);
             var $venueName = $('<p>')
             $venueName.text('Venue: ' + goodResults[l].venue.name + " in " + goodResults[l].venue.city)
-
-
             var $venueWeather = $('<p><button type="button" class="weather"><i class="fas fa-cloud"></i></button>')
             $venueWeather.attr('data-latitude', goodResults[l].venue.latitude)
                 .attr('data-longitude', goodResults[l].venue.longitude)
@@ -105,8 +103,6 @@ $(document).ready(function () {
                 .attr('data-dateTime', goodResults[l].datetime)
                 .attr('data-venue', goodResults[l].venue.name)
                 .attr('data-region', goodResults[l].venue.city)
-                .attr('data-latitude', goodResults[l].venue.latitude)
-                .attr('data-longitude', goodResults[l].venue.longitude)
             console.log("Latitude: " + goodResults[l].venue.latitude + ", Longitude: " + goodResults[l].venue.longitude);
             $div.append($description, $lineUp, $dateTime, $venueName, $venueWeather, _starGif)
             $('#goodResults').append($div)
