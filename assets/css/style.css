@@ -187,3 +187,10 @@ i.fa-trash-alt{
     animation:bounce 1s;
     color:rgba(0, 0, 0);
 }
+#recentSearch {
+    margin-top: -35px;
+    margin-left: 11%;
+    color: white;
+    font-size: 15px;
+    opacity: .5;
+}
