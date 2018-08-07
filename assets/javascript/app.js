@@ -97,11 +97,9 @@ $(document).ready(function () {
             $venueName.text('Venue: ' + goodResults[l].venue.name + " in " + goodResults[l].venue.city)
 
 
-            var $venueWeather = $('<p><i class="fa fa-cloud"></i>')
-            $venueWeather.text("Click here to see the weather!")
+            var $venueWeather = $('<p><button type="button" class="weather"><i class="fas fa-cloud"></i></button>')
                 .attr('data-latitude', goodResults[l].venue.latitude)
                 .attr('data-longitude', goodResults[l].venue.longitude)
-            // console.log("got here");
             _starGif.attr('data-description', goodResults[l].description)
                 .attr('data-lineup', goodResults[l].lineup)
                 .attr('data-dateTime', goodResults[l].datetime)
@@ -301,7 +299,7 @@ $(document).ready(function () {
     database.ref().on("value", function(snapshot) {
         // Log everything that's coming out of snapshot
         console.log("Got Here");
-        $("#recentSearch").text(snapshot.val().Band);
+        $("#recentSearch").text("Most recently searched artist: " + snapshot.val().Band);
     }, function(errorObject) {
         console.log("Errors handled: " + errorObject.code);
     });
@@ -328,13 +326,13 @@ $(document).ready(function () {
         })
         var vTempHigh = sessionStorage.getItem('highTemp');
         var vTempLow = sessionStorage.getItem('lowTemp');
-        setTimeout(function () {
-            $(this).text("Today's Forecast: High of " + vTempHigh + " and low of " + vTempLow + " (F)");
-        }, 500);
+        $(this).text("Today's Forecast: High of " + vTempHigh + " and low of " + vTempLow + " (F)");
+        
         
         
 
     })
 
 })
+
 
