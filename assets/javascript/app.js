@@ -95,7 +95,7 @@ $(document).ready(function () {
             $dateTime.text('Date: ' + eDate);
             var $venueName = $('<p>')
             $venueName.text('Venue: ' + goodResults[l].venue.name + " in " + goodResults[l].venue.city)
-            var $venueWeather = $('<p><button type="button" class="weather"><i class="fas fa-cloud"></i></button>')
+            var $venueWeather = $('<p class="weather"><button type="button"><i class="fas fa-cloud"></i></button>')
             $venueWeather.attr('data-latitude', goodResults[l].venue.latitude)
                 .attr('data-longitude', goodResults[l].venue.longitude)
             _starGif.attr('data-description', goodResults[l].description)
@@ -318,9 +318,10 @@ $(document).ready(function () {
 
     $(document).on('click', '.weather', function () {
         console.log("clicked");
-        console.log(this);
         var wLat = $(this).attr('data-latitude');
+        console.log(wLat);
         var wLong = $(this).attr('data-longitude');
+        console.log(wLong);
         var wCoords = (wLat + "," + wLong);
         console.log(wCoords);
         var wKey = "8c6957ee01f24957b5bd52d69928bd75";
