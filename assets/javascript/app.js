@@ -98,7 +98,7 @@ $(document).ready(function () {
 
 
             var $venueWeather = $('<p><button type="button" class="weather"><i class="fas fa-cloud"></i></button>')
-                .attr('data-latitude', goodResults[l].venue.latitude)
+            $venueWeather.attr('data-latitude', goodResults[l].venue.latitude)
                 .attr('data-longitude', goodResults[l].venue.longitude)
             _starGif.attr('data-description', goodResults[l].description)
                 .attr('data-lineup', goodResults[l].lineup)
