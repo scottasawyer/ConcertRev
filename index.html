@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Group project</title>
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <!-- Adding a google fonts -->
     <!-- **** -->
     <!-- jQuery -->
@@ -19,21 +17,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
     <!--Animate CSS-->
     <link rel="stylesheet" href="assets/css/animate.css">
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-
+     <!-- CSS -->
+     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 </head>
-
 <body>
     <div class="row">
         <div class="col s12 m12 l12">
             <div class="nav-wrapper">
-
-                <form id"hideMe">
-                <ul id="nav-mobile" class="hand-on-med-and-down ">                    
-                    <input class="whatDoYouGot" type="text" placeholder="Please enter a musical artist">
-                    <button class="changeNow play animated pulse infinite" type="submit" value="Submit"><i class="material-icons right">search</i></button>
-                </ul>
+                <form id "hideMe">
+                    <ul id="nav-mobile" class="hand-on-med-and-down ">
+                        <input class="whatDoYouGot" type="text" placeholder="Please enter a musical artist">
+                        <button class="changeNow play animated pulse infinite" type="submit" value="Submit"><i class="material-icons right">search</i></button>
+                    </ul>
                 </form>
             </div>
             <button id="favorites" class="fas fa-star fa-2x"></button>
@@ -42,33 +37,68 @@
             <div id="concertInformation"></div>
         </div>
     </div>
-
+    <button id="skipIntro"><i class="material-icons md-18 checkMark">done</i></button>
     <div id="openingContainer">
         
         <button type="submit" class="rotateBoxes" value="completed">
-            <!-- <p class="appTitle">The Best APP Ever!</p> -->
+        
             <div class="switch1 _s1 el "></div>
             <div class="switch2 _s2 el "></div>
             <div class="switch3 _s3 el "></div>
             <div class="switch4 _s4 el "></div>
+  
         </button>
     </div>
+    <svg id="rocketBox" viewBox="0 0 150 100"
+            xmlns="http://www.w3.org/2000/svg" version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <path stroke="none" stroke-width="1" fill="none" id="theMotionPath"
+            d="
+            M 0,90
+            C 25,40
+              35,30
+              160,0
+              "/>
+        
+        <image class="rocket" xlink:href="assets/images/rock-it_logo.png" height="25px" width="25px" cx="" cy="" r="5" fill="assets/images/rock-it_logo.png" transform="rotate(90)">
+            <animateMotion
+                
+                dur="5"
+                repeatCount="indefinite"
+                
+                keyPoints="0;0.25;0.4;0.75;1"
+                keyTimes="0;0.5;0.7;0.9;1"
+                calcMode="linear"
+                fill="freeze">
+                <mpath xlink:href="#theMotionPath" />
+            </animateMotion>
+            
+        </image>
+        
+    </svg> 
+    
+    
+    
+    
     
     
     
     <div id="countryList" class="btn-animate"></div>
     <div id="goodResults"></div>
+    
     <audio id="mysoundclip1" src="assets/audio/growl_125.mp3"></audio>
-    <audio id="mysoundclip2" src="assets/audio/dubstep_snare.wav"></audio>
-    <audio id="mysoundclip3" src="assets/audio/dub_growl.wav"></audio>
+    <audio id="mysoundclip2" src="assets/audio/droopy-bass.wav"></audio>
+    <audio id="mysoundclip3" src="assets/audio/laser-wobble.wav"></audio>
     <audio id="mysoundclip4" src="assets/audio/dubstep_chopper_twist.wav"></audio>
-
+    
     <!--Anime.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
     <!--Our js file-->
     <script src="assets/javascript/app.js"></script>
+    <!--FireBase-->
     <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <!--Moment.js-->
     <script src="https://rawgit.com/moment/moment/2.22.2/min/moment.min.js"></script>
 </body>
-
 </html>
