@@ -6,21 +6,64 @@ body, html {
     background-position: center;
     margin:0;
     padding:0;
-    height:100%;
+    
+}
+svg {
+    pointer-events: none;
+    position: absolute;  
+    /* animation: zoomInDown 1s; */
+    
+}
+#recentSearch {
+    margin-top:-30px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left:11vw;
+    opacity:.7;
+    
+}
+.material-icons.md-18 { font-size: 10px; }
+.rocket {
+    animation: zoomOut 5s infinite;
+}
+@keyframes zoomOut {
+    0% {
+        transform:scale(1);
+    }
+    25% {
+        transform:scale(.85);
+    }
+    75% {
+        transform:scale(.62);
+        transform: rotate(40deg);
+    }
+    100% {
+        transform:scale(.45);
+    }
+}
+#skipIntro{
+    float:right;
+    margin-top:70vw;
+    border-radius:10px;
+    background: rgba(0, 0, 0, 0.5);
+    border:none;
+    color:white;
 }
 .nav-wrapper{
-    background: rgba(8, 8, 8, 0.5);
+    background: rgba(0, 0, 0, 0.5);
+    color:white;
     padding:3vw;
 }
 #openingContainer{
     width:100%;
-    overflow:hidden;
+    /* overflow:hidden; */
     text-align: center;
-    padding:20vw 0 0 0;
+    padding:10vw 0 0 0;
     position: absolute; 
 }
 .whatDoYouGot {
     z-index:10;
+    color:white;
 }
 .pulse{
     animation-duration:5s;
@@ -28,8 +71,8 @@ body, html {
 .switch1, .switch2, .switch3, .switch4  {
     float:left;
     margin:0 auto;
-    height:25vw;
-    width:25vw;    
+    height:15vw;
+    width:15vw;    
 }
 .switch1{
     background:url(../images/image_part_001.jpg);
@@ -57,6 +100,7 @@ body, html {
     background-size:100%;
 }
 .rotateBoxes {
+    
     margin-bottom:0;
     background:transparent;
     border:none;  
@@ -79,6 +123,7 @@ body, html {
 #nav-mobile {
     display:flex;
     margin-left:8vw;
+    color:black;
 }
 .changeNow {
     background: rgba(0, 0, 0, 0.5);
@@ -113,7 +158,7 @@ body, html {
 #favorites {
     position:absolute;
     margin-top:-95px;
-    margin-left:15px;
+    margin-left:1vw;
     border-radius:15px;
     padding:14px;
     background:transparent;
@@ -186,11 +231,4 @@ i.fa-trash-alt{
     background:rgba(3, 223, 14, 0.5);
     animation:bounce 1s;
     color:rgba(0, 0, 0);
-}
-#recentSearch {
-    margin-top: -35px;
-    margin-left: 11%;
-    color: white;
-    font-size: 15px;
-    opacity: .5;
 }
