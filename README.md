@@ -15,6 +15,9 @@ RockIT utilizes the bandsintown api and
 * Star button adds the concert as a favorite that gets saved locally.
 * You can display favorites by clicking hte start next to the search bar.
 
+## Deployment
+
+You can see this applition live at : https://scottasawyer.github.io/RockIT/
 
 ## Installation
 1. `git clone` the repo.
