@@ -4,7 +4,6 @@ $(document).ready(function () {
     $('.nav-wrapper').hide();
     var showList = [];
     var savedConcerts = [];
-    var $this = $(this);
     var $openingContainer = $('#openingContainer');
     var $goodResults = $('#goodResults')
 
@@ -23,7 +22,7 @@ $(document).ready(function () {
 
 
     $('.checkMark').on('click', function () {
-        $this.remove();
+        $(this).remove();
         $openingContainer.hide();
         $('.rocket').hide();
         $('.nav-wrapper').show();
@@ -92,7 +91,7 @@ $(document).ready(function () {
         $goodResults.show();
         $goodResults.empty();
         event.preventDefault();             // prevents refresh
-        var country = $this.data('country')
+        var country = $(this).data('country')
         var goodResults = [];
 
         for (var i = 0; i < showList.length; i++) {
@@ -135,7 +134,7 @@ $(document).ready(function () {
 
     $(document).on('click', '.starConcert', function () {
 
-        favConcert = { 'data-description': $this.attr('data-description'), 'data-lineup': $this.attr('data-lineup'), 'data-dateTime': $this.attr('data-dateTime'), 'data-venue': $this.attr('data-venue'), 'data-region': $this.attr('data-region') }
+        favConcert = { 'data-description': $(this).attr('data-description'), 'data-lineup': $(this).attr('data-lineup'), 'data-dateTime': $(this).attr('data-dateTime'), 'data-venue': $(this).attr('data-venue'), 'data-region': $(this).attr('data-region') }
         savedConcerts.push(favConcert)
         localStorage.setItem('savedConcerts', JSON.stringify(savedConcerts))
     })
@@ -176,7 +175,7 @@ $(document).ready(function () {
 
     $(document).on('click', '.removeConcert', function () {
         var concertsToGoTo = JSON.parse(localStorage.getItem('savedConcerts'));
-        var idIndex = $this.attr('id')
+        var idIndex = $(this).attr('id')
         var indexOfDiv = idIndex.charAt(1)
         $(`#${indexOfDiv}`).remove()
         // $("#" + indexOfDiv).remove()
@@ -334,8 +333,8 @@ $(document).ready(function () {
     });
 
     $(document).on('click', '.weather', function () {
-        var wLat = $this.attr('data-latitude');
-        var wLong = $this.attr('data-longitude');
+        var wLat = $(this).attr('data-latitude');
+        var wLong = $(this).attr('data-longitude');
         var wCoords = (wLat + "," + wLong);
         var wKey = "8c6957ee01f24957b5bd52d69928bd75";
         var weatherURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + wLat + "&lon=" + wLong + "&appid=" + wKey + "&units=imperial";
@@ -350,7 +349,7 @@ $(document).ready(function () {
         })
         var vTempHigh = sessionStorage.getItem('highTemp');
         var vTempLow = sessionStorage.getItem('lowTemp');
-        $this.text("Today's Forecast: High of " + vTempHigh + " and low of " + vTempLow + " (F)");
+        $(this).text("Today's Forecast: High of " + vTempHigh + " and low of " + vTempLow + " (F)");
     })
 
 })
